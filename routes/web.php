@@ -14,5 +14,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+
+    $data = [
+        'message' => 'HOME',
+        'links' => [
+            'home',
+            'gallery',
+            'contacts',
+            'chi siamo'
+        ],
+    ];
+
+    return view('home', $data);
+})->name('home');
+
+Route::get('/gallery', function () {
+
+    $data = [
+        'message' => 'GALLERY',
+        'links' => [
+            'home',
+            'gallery',
+            'contacts',
+            'chi siamo'
+        ],
+    ];
+
+    return view('gallery', $data);
+})->name('gallery');

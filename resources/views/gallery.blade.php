@@ -7,13 +7,7 @@
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <ul>
-            @foreach ($links as $link)
-                <li><a href="{{ route($link) }}">{{$link}}</a></li>
-            @endforeach
-        </ul>
-    </header>
+    <a href="{{ route('home') }}">HOME</a>
     <h1>{{$message}}</h1>
 </body>
 </html>
@@ -22,9 +16,5 @@
 <style>
     h1 {
         color: red;
-    }
-    li {
-        display: inline-block;
-        list-style-type: none;
     }
 </style>
