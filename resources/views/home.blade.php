@@ -9,9 +9,10 @@
 <body>
     <header>
         <ul>
-            @foreach ($links as $link)
-                <li><a href="{{ route($link) }}">{{$link}}</a></li>
-            @endforeach
+            <li><a href="{{ route('home') }}">{{$links[0]}}</a></li>
+            <li><a href="{{ route('gallery') }}">{{$links[1]}}</a></li>
+            <li><a href="{{ route('contacts') }}">{{$links[2]}}</a></li>
+            <li><a href="{{ route('chisiamo') }}">{{$links[3]}}</a></li>
         </ul>
     </header>
     <h1>{{$message}}</h1>
@@ -20,11 +21,28 @@
 
 
 <style>
+    header {
+        padding: 20px 100px;
+        box-shadow: 5px 5px 10px 0px #000000;
+
+    }
     h1 {
         color: red;
+        text-align: center;
+        margin-top: 30px;
+    }
+    ul { 
+        display: flex;
+        justify-content: space-between;
     }
     li {
         display: inline-block;
         list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-size: 30px;
     }
 </style>

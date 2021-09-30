@@ -18,10 +18,10 @@ Route::get('/', function () {
     $data = [
         'message' => 'HOME',
         'links' => [
-            'home',
-            'gallery',
-            'contacts',
-            'chi siamo'
+            'Home',
+            'Gallery',
+            'Contacts',
+            'Chi siamo'
         ],
     ];
 
@@ -33,12 +33,42 @@ Route::get('/gallery', function () {
     $data = [
         'message' => 'GALLERY',
         'links' => [
-            'home',
-            'gallery',
-            'contacts',
-            'chi siamo'
+            'Home',
+            'Gallery',
+            'Contacts',
+            'Chi siamo'
         ],
     ];
 
     return view('gallery', $data);
 })->name('gallery');
+
+Route::get('/contacts', function () {
+
+    $data = [
+        'message' => 'CONTACTS',
+        'links' => [
+            'Home',
+            'Gallery',
+            'Contacts',
+            'Chi siamo'
+        ],
+    ];
+
+    return view('contacts', $data);
+})->name('contacts');
+
+Route::get('/chisiamo', function () {
+
+    $data = [
+        'message' => 'CHI SIAMO',
+        'links' => [
+            'Home',
+            'Gallery',
+            'Contacts',
+            'Chi siamo'
+        ],
+    ];
+
+    return view('chisiamo', $data);
+})->name('chisiamo');
